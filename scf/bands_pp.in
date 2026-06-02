@@ -1,0 +1,5 @@
+&bands
+  outdir='./'
+  prefix='diam'
+  filband='diam-dft'
+/

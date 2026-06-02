@@ -1,0 +1,5 @@
+&input
+  fildyn = 'diam.dyn'
+  zasr = 'simple'
+  flfrc = 'diam.k666.fc'
+/

@@ -1,0 +1,42 @@
+&control
+    calculation = 'vc-relax'
+    prefix = 'diamond'
+    outdir = './outdir'
+    pseudo_dir = './'
+    etot_conv_thr = 1e-12
+    forc_conv_thr = 1e-12
+
+    nstep = 100
+/
+&system
+    ibrav=2,
+    celldm(1)=6.64245
+    nat=2, ntyp=1,
+    ecutwfc=80
+
+    !add
+    occupations='smearing'
+    smearing='gauss'
+    degauss=0.01
+/
+&electrons
+    conv_thr=1e-12
+/
+&ions
+    ion_dynamics='bfgs'
+/
+&cell
+    !cell_dofree='ibrav'
+    cell_dynamics='bfgs'
+/
+
+ATOMIC_SPECIES
+  C  12.01078  C.upf
+
+ATOMIC_POSITIONS crystal
+  C  0.000000000000  0.000000000000  0.000000000000
+  C  0.250000000000  0.250000000000  0.250000000000
+
+K_POINTS (automatic)
+ 12 12 12 0 0 0
+
